@@ -56,7 +56,7 @@
     <td>
       <b>Signos básicos</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de los signos básicos.<br>
-      <b>Datos de Prueba:</b> ',', '.', ';', ':', '!', '?', '@', '%', '&', '*', '+', '=', '-', '¡', '¿'<br>
+      <b>Datos de Prueba:</b>',', '.', ';', ':', '!', '?', '*', '+', '=', '-', '¡', '¿', '(', ')' <br>
       <b>Resultado Esperado:</b> Cada carácter especial se traduce a su correspondiente carácter en Braille. No se arrojan errores.
     </td>
   </tr>
