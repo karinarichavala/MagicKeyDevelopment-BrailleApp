@@ -1,8 +1,12 @@
 __pycache__
-# PyCharm
+# PyCharm specific files
 .idea/
+.idea/**/Project_Default.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/
 shelf/
 workspace.xml
 httpRequests/
 dataSources/
 dataSources.local.xml
+
