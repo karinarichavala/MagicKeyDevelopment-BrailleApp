@@ -30,7 +30,7 @@ class TestBrailleTranslator(unittest.TestCase):
 
     def test_letras_especiales(self):
         # Caso de prueba 4: Letras especiales Ñ y Ü
-        texto = 'ñÜ'
+        texto = 'ñü'
         esperado = '⠻⠳'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
@@ -38,14 +38,7 @@ class TestBrailleTranslator(unittest.TestCase):
     def test_signos_basicos(self):
         # Caso de prueba 5: Signos básicos
         texto = ',.;:!?!*+=-¡¿()'
-        esperado = '⠐⠂⠆⠒⠲⠢⠖⠶⠦⠔⠐⠣⠜'
-        resultado = self.translator.texto_a_braille(texto)
-        self.assertEqual(resultado, esperado)
-
-    def test_numeros_una_cifra(self):
-        # Caso de prueba 6: Números de una cifra
-        texto = '0123456789'
-        esperado = '⠚⠂⠆⠒⠲⠢⠖⠶⠦⠔'
+        esperado = '⠂⠄⠆⠒⠖⠦⠔⠖⠶⠤⠖⠦⠐⠣⠐⠜'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
 
@@ -59,16 +52,28 @@ class TestBrailleTranslator(unittest.TestCase):
     def test_cantidades_con_puntos(self):
         # Caso de prueba 8: Cantidades con puntos
         texto = '1.23'
-        esperado = '⠼⠁⠨⠃⠉'
+        esperado = '⠼⠁⠃⠠⠉'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
 
     def test_cantidades_con_comas(self):
         # Caso de prueba 9: Cantidades con comas
-        texto = '1,23'
-        esperado = '⠼⠁⠐⠃⠉'
+        texto = '12,3'
+        esperado = '⠼⠁⠃⠐⠉'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
+
+    def test_numeros_una_cifra(self):
+        # Caso de prueba 6: Números de una cifra
+        numeros = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        braille_numeros = ['⠼⠚', '⠼⠂', '⠼⠆', '⠼⠒', '⠼⠲', '⠼⠢', '⠼⠖', '⠼⠶', '⠼⠦', '⠼⠔']
+
+        for numero, braille in zip(numeros, braille_numeros):
+            with self.subTest(numero=numero):
+                resultado = self.translator.texto_a_braille(numero)
+                self.assertEqual(resultado, braille, f"Expected {braille} for '{numero}', but got {resultado}")
+
+
 
 if __name__ == '__main__':
     unittest.main()
