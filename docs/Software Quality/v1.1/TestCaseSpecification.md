@@ -61,7 +61,7 @@
     </td>
   </tr>
   <tr>
-    <td>4</td>
+    <td>6</td>
     <td>
       <b>Números de una cifra</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de números de una cifra.<br>
@@ -70,7 +70,7 @@
     </td>
   </tr>
    <tr>
-    <td>1</td>
+    <td>7</td>
     <td>
       <b>Cantidades de Dos o Más Cifras</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de cantidades de dos o más cifras, colocando el signo de número solamente al principio.<br>
@@ -79,7 +79,7 @@
     </td>
   </tr>
   <tr>
-    <td>2</td>
+    <td>8</td>
     <td>
       <b>Cantidades con Puntos</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de cantidades que incluyen puntos.<br>
@@ -88,7 +88,7 @@
     </td>
   </tr>
   <tr>
-    <td>3</td>
+    <td>9</td>
     <td>
       <b>Cantidades con Comas</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de cantidades que incluyen comas.<br>
@@ -169,13 +169,13 @@
     <td>
       <b>Signos básicos</b><br>
       <b>Descripción:</b> Verificar la traducción correcta de los signos básicos.<br>
-      <b>Datos de Prueba:</b> ',', '.', ';', ':', '!', '?', '*', '+', '=', '-', '¡', '¿', '(', ')':<br>
+      <b>Datos de Prueba:</b>Braille para '.', ',', ';', ':', '_', '“', '”', '¡', '!', '¿', '?', '(', ')', '+', '*', '=', '÷', '-':<br>
       <div>
-        ⠂ ⠄ ⠆ ⠒ ⠖ ⠦ ⠔ ⠖ ⠿ ⠤ ⠢ ⠢ ⠣ ⠜
+        ⠄ ⠂ ⠆ ⠒ ⠤ ⠦ ⠦ ⠖ ⠖ ⠢ ⠢ ⠣ ⠜ ⠖ ⠔ ⠶ ⠲ ⠤
       </div>
       <b>Resultado Esperado:</b> Cada carácter especial se traduce a su correspondiente carácter en Braille. No se arrojan errores.<br>
       <div>
-        <b>Signos esperados:</b> , . ; : ! ? * + = - ¡ ¿ ( )
+        <b>Signos esperados:</b> . , ; : _ “ ” ¡ ! ¿ ? ( ) + * = ÷ -
       </div>
     </td>
 </tr>
