@@ -99,6 +99,8 @@
   
 </table>
 
+<!--Historia 2-->
+
 <h2>Casos de Prueba para Historia de Usuario 2</h2>
 
 <h3>Historia de Usuario Asociada</h3>
@@ -117,19 +119,33 @@
   <tr>
     <td>1</td>
     <td>
-      <b>Transcripción de Letras del Abecedario</b><br>
-      <b>Descripción:</b> Verificar la transcripción correcta de letras del abecedario.<br>
-      <b>Datos de Prueba:</b>Letras minúsculas: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z en Braille<br>
-      <b>Resultado Esperado:</b> Cada letra en Braille se transcribe a su correspondiente letra en español. No se arrojan errores.
+      <b>Transcripción de Letras minúsculas del Abecedario</b><br>
+      <b>Descripción:</b> Verificar la transcripción correcta de letras minúsculas del abecedario.<br>
+      <b>Datos de Prueba:</b> Letras minúsculas en Braille:
+      <div>
+        ⠁ ⠃ ⠉ ⠙ ⠑ ⠋ ⠛ ⠓ ⠊ ⠚ ⠅ ⠇ ⠍ ⠝ ⠕ ⠏ ⠟ ⠗ ⠎ ⠞ ⠥ ⠧ ⠺ ⠭ ⠽ ⠵
+      </div>
+      <b>Resultado Esperado:</b> Cada letra en Braille se transcribe a su correspondiente letra en español. No se arrojan errores.<br>
+      Letras minúsculas esperadas:
+      <div>
+        a b c d e f g h i j k l m n o p q r s t u v w x y z
+      </div>
     </td>
   </tr>
   <tr>
     <td>2</td>
     <td>
-      <b>Transcripción de Letras del Abecedario</b><br>
-      <b>Descripción:</b> Verificar la transcripción correcta de letras del abecedario.<br>
-      <b>Datos de Prueba:</b>Letras mayúsculas: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z en Braille<br>
-      <b>Resultado Esperado:</b> Cada letra en Braille se transcribe a su correspondiente letra en español. No se arrojan errores.
+      <b>Transcripción de Letras mayúsculas del Abecedario</b><br>
+      <b>Descripción:</b> Verificar la transcripción correcta de letras mayúsculas del abecedario.<br>
+      <b>Datos de Prueba:</b> Letras mayúsculas en Braille:
+      <div>
+        ⠠⠁ ⠠⠃ ⠠⠉ ⠠⠙ ⠠⠑ ⠠⠋ ⠠⠛ ⠠⠓ ⠠⠊ ⠠⠚ ⠠⠅ ⠠⠇ ⠠⠍ ⠠⠝ ⠠⠕ ⠠⠏ ⠠⠟ ⠠⠗ ⠠⠎ ⠠⠞ ⠠⠥ ⠠⠧ ⠠⠺ ⠠⠭ ⠠⠽ ⠠⠵
+      </div>
+      <b>Resultado Esperado:</b> Cada letra en Braille se transcribe a su correspondiente letra en español. No se arrojan errores.<br>
+      Letras mayúsculas esperadas:
+      <div>
+        A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      </div>
     </td>
   </tr>
   <tr>
@@ -137,29 +153,96 @@
     <td>
       <b>Transcripción de Vocales Acentuadas</b><br>
       <b>Descripción:</b> Verificar la transcripción correcta de vocales acentuadas.<br>
-      <b>Datos de Prueba:</b> Braille para 'á', 'é', 'í', 'ó', 'ú'<br>
-      <b>Resultado Esperado:</b> Cada vocal acentuada en Braille se transcribe a su correspondiente vocal en español. No se arrojan errores.
+      <b>Datos de Prueba:</b> Braille para 'á', 'é', 'í', 'ó', 'ú':
+      <div>
+        ⠷ ⠮ ⠌ ⠬ ⠾
+      </div>
+      <b>Resultado Esperado:</b> Cada vocal acentuada en Braille se transcribe a su correspondiente vocal en español. No se arrojan errores.<br>
+      Vocales acentuadas esperadas:
+      <div>
+        á é í ó ú
+      </div>
     </td>
   </tr>
   <tr>
-    <td>4
-    </td>
+    <td>4</td>
     <td>
-      <b>Transcripción de Signos Básicos</b><br>
-      <b>Descripción:</b> Verificar la transcripción correcta de signos básicos.<br>
-      <b>Datos de Prueba:</b> Braille para ',', '.', ';', ':', '!', '?'<br>
-      <b>Resultado Esperado:</b> Cada signo básico en Braille se transcribe a su correspondiente signo en español. No se arrojan errores.
+      <b>Signos básicos</b><br>
+      <b>Descripción:</b> Verificar la traducción correcta de los signos básicos.<br>
+      <b>Datos de Prueba:</b> ',', '.', ';', ':', '!', '?', '*', '+', '=', '-', '¡', '¿', '(', ')':<br>
+      <div>
+        ⠂ ⠄ ⠆ ⠒ ⠖ ⠦ ⠔ ⠖ ⠿ ⠤ ⠢ ⠢ ⠣ ⠜
+      </div>
+      <b>Resultado Esperado:</b> Cada carácter especial se traduce a su correspondiente carácter en Braille. No se arrojan errores.<br>
+      <div>
+        <b>Signos esperados:</b> , . ; : ! ? * + = - ¡ ¿ ( )
+      </div>
     </td>
-  </tr>
+</tr>
   <tr>
     <td>5</td>
     <td>
       <b>Transcripción de Números</b><br>
-      <b>Descripción:</b> Verificar la transcripción correcta de números.<br>
-      <b>Datos de Prueba:</b> Braille para '0' a '9'<br>
-      <b>Resultado Esperado:</b> Cada número en Braille se transcribe a su correspondiente número en español. No se arrojan errores.
+      <b>Descripción:</b> Verificar la transcripción correcta de números, probar número por número no ingresar todos a la vez<br>
+      <b>Datos de Prueba:</b> '0' al '9':
+      <div>
+        ⠼⠁ ⠼⠃ ⠼⠉ ⠼⠙ ⠼⠑ ⠼⠋ ⠼⠛ ⠼⠓ ⠼⠊ ⠼⠚
+      </div>
+      <b>Resultado Esperado:</b> Cada número en Braille se transcribe a su correspondiente número en español.<br>
+      Números esperados:
+      <div>
+        0 1 2 3 4 5 6 7 8 9
+      </div>
     </td>
   </tr>
+
+  <tr>
+    <td>6</td>
+    <td>
+      <b>Transcripción de Números de Dos o Más Cifras</b><br>
+      <b>Descripción:</b> Verificar la transcripción correcta de números de dos o más cifras.<br>
+      <b>Datos de Prueba:</b> Braille para un número de dos o más cifras:
+      <div>
+        ⠼⠁⠃ 
+      </div>
+      <b>Resultado Esperado:</b>
+      <div>
+        12
+      </div>
+    </td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>
+      <b>Transcripción de Números con Punto Decimal</b><br>
+      <b>Descripción:</b> Verificar la transcripción correcta de números con punto decimal.<br>
+      <b>Datos de Prueba:</b> Braille para número con punto decimal:
+      <div>
+        ⠼⠁⠄⠃
+      </div>
+      <b>Resultado Esperado:</b> 
+      <div>
+        1.2 
+      </div>
+    </td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>
+      <b>Transcripción de Números con Coma Decimal</b><br>
+      <b>Descripción:</b> Verificar la transcripción correcta de números con coma decimal.<br>
+      <b>Datos de Prueba:</b> Braille para números con coma decimal:
+      <div>
+        ⠼⠃⠂⠉ 
+      </div>
+      <b>Resultado Esperado:</b>
+      <div>
+        2,3
+      </div>
+    </td>
+</tr>
+
 </table>
+
 
 
