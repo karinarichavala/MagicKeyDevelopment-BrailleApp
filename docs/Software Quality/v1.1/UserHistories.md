@@ -94,6 +94,26 @@
     </td>
   </tr>
 </table>
-
+<br>
+<br>
 <!--Historias de características no funcionales-->
 
+<!--Compatibilidad: Coexistencia-->
+<table>
+  <tr>
+    <th>No: 5</th>
+    <th>Título: Verificar la Coexistencia de la Aplicación con Otros Programas</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="justify"><b>Historia de usuario:</b><br>
+      Como usuario, quiero que la aplicación pueda coexistir con otros programas en ejecución, para asegurarme de que no haya conflictos y pueda usar múltiples aplicaciones simultáneamente.
+    </td>
+  </tr>
+  <tr align="justify">
+    <td colspan="2"><b>Criterios de aceptación:</b>
+      <ol>
+        <li><b>Pruebas en Diferentes Entornos</b> <br>Dado que la aplicación está en ejecución, cuando se ejecutan otros programas simultáneamente, entonces no deben ocurrir conflictos ni interferencias.</li>
+      </ol>
+    </td>
+  </tr>
+</table>

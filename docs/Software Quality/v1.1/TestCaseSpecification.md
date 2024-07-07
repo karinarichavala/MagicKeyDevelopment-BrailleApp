@@ -352,6 +352,49 @@
     </td>
   </tr>
 </table>
+<br>
+<br>
+<!--Especifición de casos de prueba de características no funcionales-->
+
+<!--Compatibilidad: Coexistencia-->
+
+<h3>Casos de Prueba para Historia de Usuario 5</h3>
+
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que la aplicación pueda coexistir con otros programas en ejecución sin generar conflictos, y monitorear el uso de recursos para asegurar un rendimiento eficiente.</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <b>Pruebas en Diferentes Entornos y Monitoreo de Recursos</b><br>
+      <b>Descripción:</b> Verificar que la aplicación funcione correctamente en diferentes entornos con otros programas en ejecución, utilizando la librería <code>psutil</code> para monitorear el uso de CPU y memoria.<br>
+      <b>Datos de Prueba:</b> 
+      <ul>
+        <li>Entorno 1: Windows 10 con Google Chrome, Microsoft Word y Spotify en ejecución.</li>
+        <li>Entorno 2: macOS Catalina con Safari, Pages y iTunes en ejecución.</li>
+        <li>Entorno 3: Windows 11 con Fornite, VLC Media Player y Photoshop en ejecución.</li>
+      </ul>F
+      <b>Pasos:</b>
+      <ol>
+        <li>Ejecutar la aplicación en el entorno de prueba especificado.</li>
+        <li>Ejecutar simultáneamente los otros programas mencionados para el entorno de prueba.</li>
+        <li>Utilizar la librería <code>psutil</code> para monitorear el uso de CPU y memoria.</li>
+        <li>Observar el comportamiento de la aplicación y de los otros programas, detectando cualquier conflicto o interferencia.</li>
+        <li>Documentar cualquier incidencia observada y el uso de recursos durante la prueba.</li>
+        <li>Repetir los pasos anteriores para cada uno de los entornos de prueba especificados.</li>
+      </ol>
+      <b>Resultado Esperado:</b> La aplicación y los otros programas coexisten sin conflictos ni interferencias, y el uso de recursos por la aplicación es eficiente y estable en cada uno de los entornos de prueba especificados.
+    </td>
+  </tr>
+</table>
+
 
 
 
