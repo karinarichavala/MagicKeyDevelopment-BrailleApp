@@ -67,7 +67,7 @@
   <tr align="justify">
     <td colspan="2"><b>Criterios de aceptación:</b>
       <ol>
-        <li><b>Guardar Señalética Generada</b> <br>Dado que he generado una señalética en Braille, cuando presiono el botón "Imprimir en Espejo", entonces debería poder guardar la imagen generada en mi computadora.</li>
+        <li><b>Guardar Señalética Generada</b> <br>Dado que he generado una señalética en Braille, cuando presiono el botón "Generar impresión en Espejo", entonces debería poder guardar la imagen generada en mi computadora.</li>
       </ol>
     </td>
   </tr>
@@ -89,7 +89,7 @@
   <tr align="justify">
     <td colspan="2"><b>Criterios de aceptación:</b>
       <ol>
-        <li><b>Guardar Impresión en espejo Generada</b> <br>Dado que he generado una señalética en Braille, cuando presiono el botón "Imprimir en Espejo", entonces debería poder guardar la imagen generada en mi computadora.</li>
+        <li><b>Verificar Contenido de la Imagen Generada</b> <br>Dado que he generado una señalética en Braille, cuando presiono el botón "Generar impresión en Espejo", entonces debería poder guardar la imagen generada en mi computadora y verificar que el texto en braille se encuentre en espejo.</li>
       </ol>
     </td>
   </tr>

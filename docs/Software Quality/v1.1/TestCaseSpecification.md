@@ -289,5 +289,71 @@
 
 </table>
 
+<!--Historia 3-->
+
+<h3>Casos de Prueba para Historia de Usuario 3</h3>
+
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que la función de generación de señalética en braille a partir de textos en español permita guardar la imagen generada cuando se presiona el botón "Generar impresión en Espejo".</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <b>Guardar Señalética Generada</b><br>
+      <b>Descripción:</b> Verificar que la imagen de señalética generada en braille se guarde correctamente cuando se presiona el botón "Generar impresión en Espejo".<br>
+      <b>Datos de Prueba:</b> Texto en español: "Peligro"<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Ingresar el texto "Peligro" en la aplicación.</li>
+        <li>Generar la señalética en braille.</li>
+        <li>Presionar el botón "Generar impresión en Espejo".</li>
+        <li>Seleccionar la ubicación para guardar el archivo.</li>
+      </ol>
+      <b>Resultado Esperado:</b> La señalética en braille generada se guarda correctamente en la ubicación seleccionada sin errores.
+    </td>
+  </tr>
+</table>
+
+<!--Historia 4-->
+<h3>Casos de Prueba para Historia de Usuario 4</h3>
+
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que la función de generación de impresiones en espejo de textos Braille permita guardar la imagen generada cuando se presiona el botón "Generar impresión en Espejo".</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>
+      <b>Verificar Contenido de la Imagen Generada</b><br>
+      <b>Descripción:</b> Verificar que la imagen de señalética generada contiene correctamente el texto en braille en espejo correspondiente al texto ingresado.<br>
+      <b>Datos de Prueba:</b> Texto en español: "Hola"<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Ingresar el texto "Hola" en la aplicación.</li>
+        <li>Presionar el botón "Español a Braille"</li>
+        <li>Presionar el botón "Generar impresión en Espejo".</li>
+        <li>Guardar la imagen generada en la computadora.</li>
+        <li>Abrir la imagen guardada y verificar visualmente que el texto en braille corresponde correctamente al texto ingresado.</li>
+      </ol>
+      <b>Resultado Esperado:</b> La imagen guardada muestra correctamente el texto "⠨⠓⠕⠇⠁" en braille sin errores.
+    </td>
+  </tr>
+</table>
+
+
+
 
 
