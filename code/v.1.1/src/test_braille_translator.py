@@ -17,7 +17,7 @@ class TestBrailleTranslator(unittest.TestCase):
     def test_abecedario_may(self):
         # Caso de prueba 2: Abecedario completo en mayúsculas
         texto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        esperado = '⠠⠁⠠⠃⠠⠉⠠⠙⠠⠑⠠⠋⠠⠛⠠⠓⠠⠊⠠⠚⠠⠅⠠⠇⠠⠍⠠⠝⠠⠕⠠⠏⠠⠟⠠⠗⠠⠎⠠⠞⠠⠥⠠⠧⠠⠺⠠⠭⠠⠽⠠⠵'
+        esperado = '⠨⠁⠨⠃⠨⠉⠨⠙⠨⠑⠨⠋⠨⠛⠨⠓⠨⠊⠨⠚⠨⠅⠨⠇⠨⠍⠨⠝⠨⠕⠨⠏⠨⠟⠨⠗⠨⠎⠨⠞⠨⠥⠨⠧⠨⠺⠨⠭⠨⠽⠨⠵'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
 
@@ -38,7 +38,7 @@ class TestBrailleTranslator(unittest.TestCase):
     def test_signos_basicos(self):
         # Caso de prueba 5: Signos básicos
         texto = ',.;:!?!*+=-¡¿()'
-        esperado = '⠂⠄⠆⠒⠖⠦⠔⠖⠶⠤⠖⠦⠐⠣⠐⠜'
+        esperado = '⠂⠄⠆⠒⠖⠢⠖⠔⠐⠖⠶⠤⠖⠢⠣⠜'
         resultado = self.translator.texto_a_braille(texto)
         self.assertEqual(resultado, esperado)
 
@@ -66,14 +66,26 @@ class TestBrailleTranslator(unittest.TestCase):
     def test_numeros_una_cifra(self):
         # Caso de prueba 6: Números de una cifra
         numeros = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-        braille_numeros = ['⠼⠚', '⠼⠂', '⠼⠆', '⠼⠒', '⠼⠲', '⠼⠢', '⠼⠖', '⠼⠶', '⠼⠦', '⠼⠔']
+        braille_numeros = ['⠼⠚', '⠼⠁', '⠼⠃', '⠼⠉', '⠼⠙', '⠼⠑', '⠼⠋', '⠼⠛', '⠼⠓', '⠼⠊']
 
         for numero, braille in zip(numeros, braille_numeros):
             with self.subTest(numero=numero):
                 resultado = self.translator.texto_a_braille(numero)
                 self.assertEqual(resultado, braille, f"Expected {braille} for '{numero}', but got {resultado}")
 
+    def test_abecedario_braille_minusculas(self):
+        # Caso de prueba 10: Abecedario braille en minúsculas
+        texto = '⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵'
+        esperado = 'abcdefghijklmnopqrstuvwxyz'
+        resultado = self.translator.braille_a_texto(texto)
+        self.assertEqual(resultado, esperado)
 
+    def teste_abecedario_braille_mayuscula(self):
+        #Caso de prueba 11: Abecedario braille en mayuscula
+        texto ='⠨⠁⠨⠃⠨⠉⠨⠙⠨⠑⠨⠋⠨⠛⠨⠓⠨⠊⠨⠚⠨⠅⠨⠇⠨⠍⠨⠝⠨⠕⠨⠏⠨⠟⠨⠗⠨⠎⠨⠞⠨⠥⠨⠧⠨⠺⠨⠭⠨⠽⠨⠵'
+        esperado = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        resultado = self.translator.braille_a_texto(texto)
+        self.assertEqual(resultado, esperado)
 
 if __name__ == '__main__':
     unittest.main()
