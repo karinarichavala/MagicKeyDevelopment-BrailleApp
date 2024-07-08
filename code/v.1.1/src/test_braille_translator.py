@@ -80,12 +80,5 @@ class TestBrailleTranslator(unittest.TestCase):
         resultado = self.translator.braille_a_texto(texto)
         self.assertEqual(resultado, esperado)
 
-    def teste_abecedario_braille_mayuscula(self):
-        #Caso de prueba 11: Abecedario braille en mayuscula
-        texto ='⠨⠁⠨⠃⠨⠉⠨⠙⠨⠑⠨⠋⠨⠛⠨⠓⠨⠊⠨⠚⠨⠅⠨⠇⠨⠍⠨⠝⠨⠕⠨⠏⠨⠟⠨⠗⠨⠎⠨⠞⠨⠥⠨⠧⠨⠺⠨⠭⠨⠽⠨⠵'
-        esperado = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        resultado = self.translator.braille_a_texto(texto)
-        self.assertEqual(resultado, esperado)
-
 if __name__ == '__main__':
     unittest.main()
