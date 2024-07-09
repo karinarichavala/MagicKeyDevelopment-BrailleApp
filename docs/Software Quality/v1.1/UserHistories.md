@@ -117,8 +117,8 @@
     </td>
   </tr>
 </table>
-
-<!--Capacidad: Aprendizabilidad-->
+<br>
+<!--Capacidad de Interacción: Aprendizabilidad-->
 
 <table>
   <tr>
@@ -135,6 +135,49 @@
       <ol>
         <li><b>Disponibilidad del Manual</b> <br>Dado que necesito aprender a usar la aplicación, cuando accedo a la sección de ayuda, entonces debería poder descargar el manual de usuario en PDF.</li>
         <li><b>Contenido del Manual</b> <br>Dado que estoy leyendo el manual, cuando reviso el contenido, entonces este debe explicar claramente cómo utilizar las funcionalidades de la aplicación.</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+<br>
+
+<!--Capacidad de Interacción: Protección frente a errores del usuario-->
+
+<table>
+  <tr>
+    <th>No: 7</th>
+    <th>Título: No Permitir la Entrada de Caracteres que No Sean Braille</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="justify"><b>Historia de usuario:</b><br>
+      Como usuario, quiero que la aplicación no permita la entrada de caracteres que no sean braille al ingresar el texto braille para traducirlo a español, y que el botón "Braille a Español" se desactive si se ingresan caracteres no permitidos, para evitar errores y asegurar la precisión de la traducción.
+    </td>
+  </tr>
+  <tr align="justify">
+    <td colspan="2"><b>Criterios de aceptación:</b>
+      <ol>
+        <li><b>Desactivación del Botón de Traducción</b> <br>Dado que estoy usando el campo de entrada de texto braille, cuando ingreso caracteres que no sean braille, entonces el botón "Braille a Español" debe desactivarse automáticamente.</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+<br>
+<!--Capacidad de Interacción: Involucración del usuario-->
+
+<table>
+  <tr>
+    <th>No: 8</th>
+    <th>Título: Proveer Opciones de Personalización: Modo Oscuro</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="justify"><b>Historia de usuario:</b><br>
+      Como usuario, quiero tener la opción de activar el modo oscuro en la aplicación, para personalizar la interfaz y reducir la fatiga visual.
+    </td>
+  </tr>
+  <tr align="justify">
+    <td colspan="2"><b>Criterios de aceptación:</b>
+      <ol>
+        <li><b>Disponibilidad del Modo Oscuro</b> <br>Dado que estoy usando la aplicación, en la pantalla principál debería poder ver un botón para activar el modo oscuro.</li>
       </ol>
     </td>
   </tr>

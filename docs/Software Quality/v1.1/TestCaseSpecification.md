@@ -440,6 +440,70 @@
     </td>
   </tr>
 </table>
+<!--Capacidad de Interacción: Protección frente a errores del usuario-->
+
+<h3>Casos de Prueba para Historia de Usuario 7</h3>
+
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que la aplicación no permita la entrada de caracteres que no sean braille al ingresar el texto braille para traducirlo a español y que el botón "Braille a Español" se desactive en caso de caracteres no permitidos.</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <b>Desactivación del Botón de Traducción</b><br>
+      <b>Descripción:</b> Verificar que el botón "Braille a Español" se desactive automáticamente cuando se ingresan caracteres que no sean braille.<br>
+      <b>Datos de Prueba:</b> Intento de ingreso de caracteres no braille (letras del alfabeto, números, signos de puntuación).<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Abrir la aplicación.</li>
+        <li>Intentar ingresar caracteres que no sean braille en el campo de entrada de texto braille.</li>
+        <li>Observar si el botón "Braille a Español" se desactiva automáticamente.</li>
+      </ol>
+      <b>Resultado Esperado:</b> El botón "Braille a Español" se desactiva automáticamente cuando se ingresan caracteres que no sean braille.
+    </td>
+  </tr>
+</table>
+
+<!--Capacidad de Interacción: Involucración del usuario-->
+
+<h3>Casos de Prueba para Historia de Usuario 8</h3>
+
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que la aplicación permita activar el modo oscuro.</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <b>Disponibilidad del Modo Oscuro</b><br>
+      <b>Descripción:</b> Verificar que la opción para activar el modo oscuro esté disponible en la aplicación<br>
+      <b>Datos de Prueba:</b> Opciones de personalización de la aplicación.<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Abrir la aplicación.</li>
+        <li>Verificar que haya un botón para activar el modo oscuro.</li>
+        <li>Activar el modo oscuro.</li>
+        <li>Verificar que la interfaz de la aplicación cambie al modo oscuro.</li>
+      </ol>
+      <b>Resultado Esperado:</b> La opción para activar el modo oscuro está disponible y, al activarla, la interfaz de la aplicación cambia a este modo.
+    </td>
+  </tr>
+</table>
+
+
 
 
 
