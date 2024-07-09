@@ -117,3 +117,28 @@
     </td>
   </tr>
 </table>
+
+<!--Capacidad: Aprendizabilidad-->
+
+<table>
+  <tr>
+    <th>No: 6</th>
+    <th>Título: Proveer un Manual de Usuario en PDF</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="justify"><b>Historia de usuario:</b><br>
+      Como usuario, quiero tener acceso a un manual de usuario en PDF, para poder aprender a usar la aplicación sin dificultad.
+    </td>
+  </tr>
+  <tr align="justify">
+    <td colspan="2"><b>Criterios de aceptación:</b>
+      <ol>
+        <li><b>Disponibilidad del Manual</b> <br>Dado que necesito aprender a usar la aplicación, cuando accedo a la sección de ayuda, entonces debería poder descargar el manual de usuario en PDF.</li>
+        <li><b>Contenido del Manual</b> <br>Dado que estoy leyendo el manual, cuando reviso el contenido, entonces este debe explicar claramente cómo utilizar las funcionalidades de la aplicación.</li>
+      </ol>
+    </td>
+  </tr>
+</table>
+
+
+

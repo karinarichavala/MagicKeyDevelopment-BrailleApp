@@ -395,8 +395,51 @@
   </tr>
 </table>
 
+<!--Capacidad: Aprendizabilidad-->
 
+<h3>Casos de Prueba para Historia de Usuario 6</h3>
 
+<h3>Objetivo de la Prueba</h3>
+<p>Verificar que el manual de usuario en PDF esté disponible, sea accesible y efectivamente ayude a los usuarios a aprender a usar la aplicación.</p>
+
+<h3>Casos de Prueba</h3>
+
+<table>
+  <tr>
+    <th>No:</th>
+    <th>Descripción del Caso de Prueba</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>
+      <b>Disponibilidad del Manual</b><br>
+      <b>Descripción:</b> Verificar que el manual de usuario en PDF esté disponible para descargar desde la sección de ayuda.<br>
+      <b>Datos de Prueba:</b> Acceso a la sección de ayuda desde la aplicación.<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Acceder a la aplicación e ir a la sección de ayuda.</li>
+        <li>Buscar la opción para descargar el manual de usuario en PDF.</li>
+        <li>Descargar el manual y verificar que el archivo se descarga correctamente.</li>
+      </ol>
+      <b>Resultado Esperado:</b> El manual de usuario en PDF está disponible y se descarga correctamente desde la sección de ayuda.
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>
+      <b>Contenido del Manual</b><br>
+      <b>Descripción:</b> Verificar que el contenido del manual de usuario en PDF explique detalladamente cómo utilizar las funcionalidades de la aplicación.<br>
+      <b>Datos de Prueba:</b> Manual de usuario en PDF.<br>
+      <b>Pasos:</b>
+      <ol>
+        <li>Abrir el manual de usuario en PDF.</li>
+        <li>Leer el contenido del manual, revisando las secciones que explican las funcionalidades de la aplicación.</li>
+        <li>Verificar que las explicaciones sean claras, detalladas y fáciles de entender.</li>
+      </ol>
+      <b>Resultado Esperado:</b> El manual de usuario en PDF proporciona explicaciones claras sobre cómo utilizar las funcionalidades de la aplicación.
+    </td>
+  </tr>
+</table>
 
 
 
