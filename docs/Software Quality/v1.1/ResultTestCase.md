@@ -13,7 +13,7 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.002.png)|
+|![](./Imagenes/h1c2.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las letras del abecedario en mayúsculas.|
 
 
@@ -21,7 +21,7 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.003.png)|
+|![](./Imagenes/h1c3.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las vocales acentuadas.|
 
 
@@ -32,7 +32,7 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.004.png)|
+|![](./Imagenes/h1c4.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las letras 'ñ' y 'Ü'.|
 
 
@@ -43,14 +43,14 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.005.png)|
+|![](./Imagenes/h1c5.png)|
 |El resultado de la prueba muestra un error que no está funcionando los signos básicos ya que no está traduciendo correctamente el signo ‘:’y ‘¿’.|
 
 |**test\_numeros\_una\_cifra(self):** Verificar la conversión de números de una sola cifra a Braille.|
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.006.png)|
+|![](./Imagenes/h1c6.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de números de una cifra, ingresando uno por uno como '0' a '9'.|
 
 
@@ -62,7 +62,7 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.007.png)|
+|![](./Imagenes/h1c7.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de cantidades de dos o más cifras como 123.|
 
 
@@ -70,14 +70,14 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.008.png)|
+|![](./Imagenes/h1c8.png)|
 |El resultado de la prueba muestra un error en cómo se está manejando la traducción de uno o más caracteres en la secuencia el punto decimal’.’.|
 
 |**test\_cantidades\_con\_comas(self):** Verificar la conversión de números con comas a Braille.|
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.009.png)|
+|![](./Imagenes/h1c9.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de cantidades que incluyen comas como 1,23.|
 
 **Casos de Prueba para Historia de Usuario 2**
@@ -88,21 +88,21 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.010.png)|
+|![](./Imagenes/h1c10.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las letras del abecedario en minúsculas.|
 
 |**test\_abecedario\_braille\_mayusculas:** Verificar que la función braille\_a\_texto convierte correctamente el Braille que representa letras mayúsculas del alfabeto a texto.|
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.011.png)|
+|![](./Imagenes/h1c11.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las letras del abecedario en mayúsculas.|
 
 |**test\_vocales\_acentuadas\_braille:** Verificar que la función braille\_a\_texto convierte correctamente el Braille que representa vocales acentuadas a texto.|
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.012.png)|
+|![](./Imagenes/h1c12.png)|
 |El resultado de la prueba muestra y verifica la traducción correcta de las vocales acentuadas.|
 
 
@@ -116,7 +116,7 @@
 | :- |
 |**Resultado de la Prueba**|
 |Al ejecutar el test se obtuvo el resultado:|
-|![](Aspose.Words.ee6d763f-624c-4ffb-a659-f53b22c0eadf.013.png)|
+|![](./Imagenes/h1c13.png)|
 |El resultado de la prueba muestra un error en la traducción ya que no esta convirtiendo de manera correcta el signo ‘:’y ‘┐’.|
 
 
