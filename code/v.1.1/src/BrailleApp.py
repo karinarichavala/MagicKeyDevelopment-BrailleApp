@@ -1,5 +1,8 @@
+import os
+import shutil
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import filedialog
 from BrailleTranslator import BrailleTranslator
 from BrailleImageGenerator import BrailleImageGenerator
 from BrailleKeyboard import BrailleKeyboard
@@ -13,6 +16,8 @@ class BrailleApp:
 
         # Configurar modo maximizado
         self.root.state('zoomed')
+
+        self.modo_oscuro = False  # Estado inicial del modo
 
         fuente_grande = ('Helvetica', 14)
 
@@ -49,6 +54,14 @@ class BrailleApp:
 
         self.btn_copiar_brl = tk.Button(root, text="Copiar Texto Braille", command=self.copiar_texto_brl, font=fuente_grande)
         self.btn_copiar_brl.grid(row=4, column=1, padx=10, pady=10, sticky='ew')
+
+        # Botón para modo oscuro
+        self.btn_modo_oscuro = tk.Button(root, text="Modo Oscuro", command=self.toggle_modo_oscuro, font=fuente_grande)
+        self.btn_modo_oscuro.grid(row=5, column=0, columnspan=2, padx=10, pady=10, sticky='ew')
+
+        # Botón para descargar PDF
+        self.btn_descargar_pdf = tk.Button(root, text="Descargar Manual de Usuario", command=self.descargar_pdf, font=fuente_grande)
+        self.btn_descargar_pdf.grid(row=6, column=0, columnspan=2, padx=10, pady=10, sticky='ew')
 
         # Configurar el ajuste de columnas y filas
         root.grid_rowconfigure(1, weight=1)
@@ -121,3 +134,53 @@ class BrailleApp:
 
         # Mostrar mensaje de confirmación
         messagebox.showinfo("Copiar Texto", "Texto copiado al portapapeles con éxito.")
+
+    def toggle_modo_oscuro(self):
+        if self.modo_oscuro:
+            self.modo_normal()
+        else:
+            self.activar_modo_oscuro()
+
+    def modo_normal(self):
+        self.modo_oscuro = False
+        self.root.config(bg='white')
+        self.label_esp.config(bg='white', fg='black')
+        self.label_brl.config(bg='white', fg='black')
+        self.text_esp.config(bg='white', fg='black', insertbackground='black')
+        self.text_brl.config(bg='white', fg='black', insertbackground='black')
+        self.btn_esp_to_brl.config(bg='lightgray', fg='black')
+        self.btn_brl_to_esp.config(bg='lightgray', fg='black')
+        self.btn_teclado_virtual.config(bg='lightgray', fg='black')
+        self.btn_imprimir_espejo.config(bg='lightgray', fg='black')
+        self.btn_copiar_esp.config(bg='lightgray', fg='black')
+        self.btn_copiar_brl.config(bg='lightgray', fg='black')
+        self.btn_modo_oscuro.config(bg='lightgray', fg='black', text='Modo Oscuro')
+
+    def activar_modo_oscuro(self):
+        self.modo_oscuro = True
+        self.root.config(bg='black')
+        self.label_esp.config(bg='black', fg='white')
+        self.label_brl.config(bg='black', fg='white')
+        self.text_esp.config(bg='black', fg='white', insertbackground='white')
+        self.text_brl.config(bg='black', fg='white', insertbackground='white')
+        self.btn_esp_to_brl.config(bg='gray', fg='white')
+        self.btn_brl_to_esp.config(bg='gray', fg='white')
+        self.btn_teclado_virtual.config(bg='gray', fg='white')
+        self.btn_imprimir_espejo.config(bg='gray', fg='white')
+        self.btn_copiar_esp.config(bg='gray', fg='white')
+        self.btn_copiar_brl.config(bg='gray', fg='white')
+        self.btn_modo_oscuro.config(bg='gray', fg='white', text='Modo Normal')
+
+    def descargar_pdf(self):
+        # Ruta del archivo PDF existente
+        ruta_origen = os.path.join(os.path.dirname(__file__), "archivo/Manual de usuario.pdf")
+
+        # Seleccionar ubicación y nombre del archivo para guardar
+        ruta_destino = filedialog.asksaveasfilename(defaultextension=".pdf", filetypes=[("PDF files", "*.pdf")])
+
+        if ruta_destino:
+            try:
+                shutil.copy(ruta_origen, ruta_destino)
+                messagebox.showinfo("Descarga PDF", "Archivo PDF descargado con éxito.")
+            except Exception as e:
+                messagebox.showerror("Error", f"No se pudo descargar el archivo PDF: {e}")
