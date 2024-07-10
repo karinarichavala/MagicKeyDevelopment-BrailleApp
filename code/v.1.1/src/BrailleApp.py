@@ -92,10 +92,11 @@ class BrailleApp:
         self.text_brl.insert(tk.END, texto_brl_espejo)
     
         # Generar y guardar la imagen con el texto invertido en Braille
+        nombre_archivo = "espejo.png"  # Nombre del archivo para la imagen en espejo
         self.image_generator.generar_senaletica_braille(texto_brl_espejo, nombre_archivo)
-
+    
         # Mostrar mensaje de confirmación
-        messagebox.showinfo("Generación de Imagen en Espejo", f"Imagen en espejo guardada exitosamente")
+        messagebox.showinfo("Generación de Imagen en Espejo", f"Imagen en espejo guardada como {nombre_archivo}")
 
     def copiar_texto_esp(self):
         texto_esp = self.text_esp.get("1.0", tk.END).strip()
