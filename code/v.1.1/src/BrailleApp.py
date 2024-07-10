@@ -28,7 +28,8 @@ class BrailleApp:
 
         self.text_brl = tk.Text(root, height=10, width=50, font=fuente_grande)
         self.text_brl.grid(row=1, column=1, padx=10, pady=10, sticky='nsew')
-
+        self.text_brl.focus_set()
+        
         # Botones
         self.btn_esp_to_brl = tk.Button(root, text="Español a Braille", command=self.convertir_esp_a_brl, font=fuente_grande)
         self.btn_esp_to_brl.grid(row=2, column=0, padx=10, pady=10, sticky='ew')
@@ -67,16 +68,17 @@ class BrailleApp:
         self.text_esp.insert(tk.END, texto_esp)
 
     def teclado_virtual(self):
-        self.teclado_window = tk.Toplevel(self.root)
-        self.teclado_window.title("Teclado de Braille")
-        self.teclado = BrailleKeyboard(self.teclado_window, self.on_braille_input)
-        self.teclado_window.mainloop()
+        BrailleKeyboard(self.root, self.on_braille_input)
 
-    def on_braille_input(self, braille_text):
-        current_text = self.text_brl.get("1.0", tk.END).strip()
-        self.text_brl.delete("1.0", tk.END)
-        self.text_brl.insert(tk.END, current_text + braille_text)
-
+    def on_braille_input(self, value):
+    # Verificar si el valor está en el diccionario de Braille
+        if value in self.translator.braille_dict:
+            braille_char = self.translator.braille_dict[value]
+            self.text_brl.insert(tk.END, braille_char)
+        else:
+            # Si el valor no tiene un equivalente Braille, insertar tal cual
+            self.text_brl.insert(tk.END, value)
+        
     def generar_senaletica(self):
         texto_esp = self.text_esp.get("1.0", tk.END).strip()
         nombre_archivo = "senaletica.png"
