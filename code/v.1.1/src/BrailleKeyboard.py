@@ -2,12 +2,14 @@ import tkinter as tk
 from tkinter import messagebox
 
 class BrailleKeyboard(tk.Toplevel):
-    def __init__(self, master, callback):
+    def __init__(self, master, callback, text_widget):
         super().__init__(master)
         self.callback = callback
+        self.text_widget = text_widget  # Guardamos la referencia del widget de texto
         self.shift_active = False  # Estado del botón Shift
+        self.caps_lock_active = False  # Estado del botón Caps Lock
         self.title("Teclado de Braille")
-        
+
         # Obtener el tamaño de la ventana principal
         self.master.update_idletasks()
         main_width = self.master.winfo_width()
@@ -17,7 +19,7 @@ class BrailleKeyboard(tk.Toplevel):
 
         # Establecer la posición del teclado en la parte inferior derecha
         self.geometry(f"1410x400+{main_x + main_width - 1500}+{main_y + main_height - 400}")
-        
+
         self.create_buttons()
 
     def create_buttons(self):
@@ -52,24 +54,33 @@ class BrailleKeyboard(tk.Toplevel):
         
         self.buttons = {}
         self.render_keyboard()
-        
+
+
     def render_keyboard(self):
         for widget in self.winfo_children():
             widget.destroy()
 
         for row_index, row_keys in enumerate(self.qwerty_layout):
+            self.grid_rowconfigure(row_index, weight=1)
             for col_index, key in enumerate(row_keys):
+                self.grid_columnconfigure(col_index, weight=1)
+
                 if key == 'Shift':
                     btn = tk.Button(self, text=key, command=self.toggle_shift)
-                elif key == 'Space':
-                    btn = tk.Button(self, text=key, command=lambda value=' ': self.on_button_click(value))
+                elif key == 'Caps Lock':
+                    btn = tk.Button(self, text=key, command=self.toggle_caps_lock)
+                elif key == 'Backspace':  # Aquí manejas Backspace
+                    btn = tk.Button(self, text=key, command=self.on_backspace)
                 else:
-                    if self.shift_active and key in self.shift_dict:
-                        display_key = self.shift_dict[key]
-                    elif self.shift_active and key.isalpha():
+                    # Manejo de mayúsculas según Caps Lock y Shift
+                    if self.shift_active and not self.caps_lock_active:
                         display_key = key.upper()
+                    elif self.caps_lock_active and not self.shift_active:
+                        display_key = key.upper()
+                    elif self.caps_lock_active and self.shift_active:
+                        display_key = key.lower()
                     else:
-                        display_key = key
+                        display_key = key.lower()
 
                     if display_key in self.braille_dict:
                         btn_text = f"{display_key}\n{self.braille_dict[display_key]}"
@@ -78,13 +89,32 @@ class BrailleKeyboard(tk.Toplevel):
 
                     btn = tk.Button(self, text=btn_text, command=lambda value=display_key: self.on_button_click(value))
 
-                btn.grid(row=row_index, column=col_index, padx=5, pady=5, ipadx=10, ipady=10)
+                btn.grid(row=row_index, column=col_index, padx=5, pady=5, ipadx=10, ipady=10, sticky="nsew")
                 self.buttons[key] = btn
+
+    def on_backspace(self):
+        current_widget = self.text_widget
+
+        if isinstance(current_widget, tk.Entry):
+            cursor_position = current_widget.index(tk.INSERT)
+            if cursor_position > 0:
+                current_widget.delete(cursor_position - 1, cursor_position)
+
+        elif isinstance(current_widget, tk.Text):
+            cursor_position = current_widget.index(tk.INSERT)
+            if cursor_position != "1.0":
+                current_widget.delete(f"{cursor_position}-1c", cursor_position)
 
     def toggle_shift(self):
         self.shift_active = not self.shift_active
         self.render_keyboard()
-        
+
+    def toggle_caps_lock(self):
+        self.caps_lock_active = not self.caps_lock_active
+        self.render_keyboard()
+
     def on_button_click(self, value):
         # Llamar al callback con el valor del botón presionado
         self.callback(value)
+
+

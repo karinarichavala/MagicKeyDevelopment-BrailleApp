@@ -81,7 +81,7 @@ class BrailleApp:
         self.text_esp.insert(tk.END, texto_esp)
 
     def teclado_virtual(self):
-        BrailleKeyboard(self.root, self.on_braille_input)
+        BrailleKeyboard(self.root, self.on_braille_input, self.text_brl)  # Pasamos el widget de texto
 
     def on_braille_input(self, value):
     # Verificar si el valor está en el diccionario de Braille
