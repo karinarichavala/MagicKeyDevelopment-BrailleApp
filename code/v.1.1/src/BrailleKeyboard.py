@@ -22,6 +22,7 @@ class BrailleKeyboard(tk.Toplevel):
 
         self.create_buttons()
 
+
     def create_buttons(self):
         self.braille_dict = {
             'a': '⠁', 'b': '⠃', 'c': '⠉', 'd': '⠙', 'e': '⠑', 'f': '⠋', 'g': '⠛', 'h': '⠓', 'i': '⠊', 'j': '⠚',
@@ -71,6 +72,10 @@ class BrailleKeyboard(tk.Toplevel):
                     btn = tk.Button(self, text=key, command=self.toggle_caps_lock)
                 elif key == 'Backspace':  # Aquí manejas Backspace
                     btn = tk.Button(self, text=key, command=self.on_backspace)
+                elif key == 'Space':
+                    btn = tk.Button(self, text=key, command=self.on_space)
+                elif key == 'Enter':  # Aquí manejas Enter
+                    btn = tk.Button(self, text=key, command=self.on_enter)
                 else:
                     # Manejo de mayúsculas según Caps Lock y Shift
                     if self.shift_active and not self.caps_lock_active:
@@ -113,8 +118,13 @@ class BrailleKeyboard(tk.Toplevel):
         self.caps_lock_active = not self.caps_lock_active
         self.render_keyboard()
 
+    def on_space(self):
+        self.callback(' ')
+
+    def on_enter(self):
+        self.callback('\n')
+
     def on_button_click(self, value):
-        # Llamar al callback con el valor del botón presionado
         self.callback(value)
 
 
